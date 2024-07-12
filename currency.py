@@ -1,11 +1,7 @@
 import requests
 import streamlit as st
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
-
-API_KEY = os.getenv("CURRENCY_API_KEY")
+API_KEY = st.secrets["CURRENCY_API"]["API_KEY"]
 
 st.header("Simple Currency Converter")
 
